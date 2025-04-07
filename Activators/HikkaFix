@@ -569,7 +569,7 @@ class Hikka:
                 (
                     "\033[0;96m{}\033[0m" if IS_TERMUX or self.arguments.tty else "{}"
                 ).format(
-                    "You can use QR-code to login from another device (your friend"s"
+                    "You can use QR-code to login from another device (your friends"
                     " phone, for example)."
                 )
             )
@@ -713,7 +713,7 @@ class Hikka:
                 logging.error(
                     (
                         "Check that this is the only instance running. "
-                        "If that doesn"t help, delete the file "%s""
+                        "If that doesnt help, delete the file '%s'"
                     ),
                     session.filename,
                 )
@@ -728,7 +728,7 @@ class Hikka:
             except PhoneNumberInvalidError:
                 logging.error(
                     "Phone number is incorrect. Use international format (+XX...) "
-                    "and don"t put spaces in it."
+                    "and dont put spaces in it."
                 )
                 self.sessions.remove(session)
             except InteractiveAuthRequired:
@@ -791,7 +791,7 @@ class Hikka:
                 "https://github.com/hikariatama/assets/raw/master/hikka_banner.mp4",
                 caption=(
                     "🌘 <b>Hikka {} started!</b>\n\n🌳 <b>GitHub commit SHA: <a"
-                    " href="https://github.com/hikariatama/Hikka/commit/{}">{}</a></b>\n✊"
+                    " href='https://github.com/hikariatama/Hikka/commit/{}'>{}</a></b>\n✊"
                     " <b>Update status: {}</b>\n<b>{}</b>".format(
                         ".".join(list(map(str, list(__version__)))),
                         build,
