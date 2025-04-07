@@ -918,4 +918,4 @@ hikka = Hikka()'''
 
 with open('main.py', 'w') as f: f.write(text)
 
-os.system('python3 -m hikka')
+os.system('python3 -m ../hikka')
