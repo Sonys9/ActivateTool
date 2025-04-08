@@ -761,12 +761,13 @@ class Hikka:
             build = utils.get_git_hash()
             diff = repo.git.log([f"HEAD..origin/{version.branch}", "--oneline"])
             upd = "Update required" if diff else "Up-to-date"
+            version_hikka = ".".join(list(map(str, list(__version__))))
 
             logo = (
                 "█ █ █ █▄▀ █▄▀ ▄▀█\\n"
                 "█▀█ █ █ █ █ █ █▀█\\n\\n"
                 f"• Build: {build[:7]}\\n"
-                f"• Version: {".".join(list(map(str, list(__version__))))}\\n"
+                f"• Version: {version_hikka}\\n"
                 f"• {upd}\\n"
             )
 
