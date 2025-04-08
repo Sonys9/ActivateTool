@@ -40,12 +40,14 @@ import socket
 import sqlite3
 import typing
 import requests
+import subprocess
 from getpass import getpass
 from pathlib import Path
 
-os.system("python3 -m pip install requests --break-system-packages")
-os.system("python3 -m pip3 install requests --break-system-packages")
-os.system("pip3 install requests --break-system-packages")
+subprocess.run('python3 -m pip install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.run('python3 -m pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.run('pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.run('pip3 install requests'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 import hikkatl
 from hikkatl import events
