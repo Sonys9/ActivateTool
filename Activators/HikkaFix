@@ -43,8 +43,8 @@ import subprocess
 from getpass import getpass
 from pathlib import Path
 
-subprocess.run('python -m hikka'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-subprocess.run('python3 -m hikka'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.run('pkill -f "python -m hikka"'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.run('pkill -f "python3 -m hikka"'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.run('python3 -m pip install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.run('python3 -m pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.run('pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
