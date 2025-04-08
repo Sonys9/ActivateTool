@@ -1,5 +1,8 @@
 import os
 
+# Ты правда добрался до сюда? Отлично!
+# Скажешь, что этот модуль/скрипт вирус - ты хуесос ок.
+
 text = '''"""Main script, where all the fun starts"""
 
 #    Friendly Telegram (telegram userbot)
