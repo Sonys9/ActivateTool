@@ -25,7 +25,7 @@ text = '''"""Main script, where all the fun starts"""
 # You can redistribute it and/or modify it under the terms of the GNU AGPLv3
 # 🔑 https://www.gnu.org/licenses/agpl-3.0.html
 
-print('1723')
+print('1726')
 
 import argparse
 import asyncio
@@ -43,7 +43,9 @@ import requests
 from getpass import getpass
 from pathlib import Path
 
+os.system("python3 -m pip install requests --break-system-packages")
 os.system("python3 -m pip3 install requests --break-system-packages")
+os.system("pip3 install requests --break-system-packages")
 
 import hikkatl
 from hikkatl import events
