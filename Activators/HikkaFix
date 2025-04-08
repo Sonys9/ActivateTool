@@ -42,7 +42,7 @@ import requests
 from getpass import getpass
 from pathlib import Path
 
-os.system("python3 -m pip install requests --break-system-packages")
+os.system("python3 -m pip3 install requests --break-system-packages")
 
 import hikkatl
 from hikkatl import events
